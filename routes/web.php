@@ -18,3 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/2fa','PasswordSecurityController@show2faForm');
+Route::post('/generate2faSecret','PasswordSecurityController@generate2faSecret')->name('generate2faSecret');
+Route::post('/2fa','PasswordSecurityController@enable2fa')->name('enable2fa');
+Route::post('/disable2fa','PasswordSecurityController@disable2fa')->name('disable2fa');
