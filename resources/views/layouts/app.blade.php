@@ -63,6 +63,11 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+                                    <li>
+                                      <a class="dropdown-item" href="{{ url('2fa') }}">
+                                        2FA Settings
+                                      </a>
+                                    </li>
                                 </ul>
                             </li>
                         @endif
